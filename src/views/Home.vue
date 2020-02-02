@@ -1,18 +1,29 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld class="" msg="Welcome to Your Vue.js App" />
+    <van-number-keyboard safe-area-inset-bottom />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from '@/components/HelloWorld.vue'
+import userApi from '@/api/user'
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
-    HelloWorld
-  }
-};
+    HelloWorld,
+  },
+  async mounted() {
+    // try {
+    //   await userApi.login()
+    // } catch (error) {
+    //   await userApi.getProFile()
+    // }
+  },
+  methods: {
+  },
+}
 </script>
