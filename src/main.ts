@@ -1,21 +1,15 @@
 import Vue from 'vue'
-import {
-  Row, Cell, Button, Icon, Col, CellGroup, NumberKeyboard,
-} from 'vant'
+import vant from 'vant'
+import 'vant/lib/index.css'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
+Vue.use(vant)
 
 new Vue({
   components: {
-    [Row.name]: Row,
-    [Col.name]: Col,
-    [Icon.name]: Icon,
-    [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup,
-    [NumberKeyboard.name]: NumberKeyboard,
   },
   router,
   store,
